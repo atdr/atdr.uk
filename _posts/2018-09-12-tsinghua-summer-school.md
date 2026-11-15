@@ -4,7 +4,7 @@ layout: post
 date: 2018-09-12 16:42
 image: /assets/images/all-summer-school.jpg
 headerImage: true
-tag: 
+tag:
 star: false
 category: blog
 author: andreasrichardson
@@ -32,6 +32,6 @@ One of the most valuable aspects of the experience for me was the wonderful peop
 
 I’m sure there’s never been a more important time for chemical engineers to be addressing environmental challenges. The breadth of industry we can impact gives us a unique position from which to drive positive change. I left Tsinghua confident that the future is bright.
 
-* * *
+______________________________________________________________________
 
 This experience was supported by scholarships from Tsinghua and [Imperial](https://www.imperial.ac.uk/students/global-opportunities/ug/externalopp/tsinghuasummerschools/), for which I’m very grateful. This post has also been published on the [Department of Chemical Engineering blog](https://blogs.imperial.ac.uk/chemical-engineering/2018/10/15/adventures-in-asia-summer-school-at-tsinghua/).

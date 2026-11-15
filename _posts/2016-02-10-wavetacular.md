@@ -4,7 +4,7 @@ layout: post
 date: 2016-02-10 17:36
 image: /assets/images/ISS014-E-16597.jpg
 headerImage: false
-tag: 
+tag:
 star: false
 category: blog
 author: andreasrichardson

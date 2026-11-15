@@ -4,7 +4,7 @@ layout: post
 date: 2018-07-04 17:28
 image: /assets/images/edtech18.png
 headerImage: true
-tag: 
+tag:
 star: false
 category: blog
 author: andreasrichardson
@@ -128,8 +128,10 @@ I've been experimenting with automating my document filing process within _OneDr
 
 ## Future
 
-The big plan for next year is to become **paperless**\---at least for lecture notes---using one of the budget-friendly [new iPads](https://nr.apple.com/dE4x1p2G0v) with an Apple Pencil. This should reduce the amount of scanning I have to do, and make the content of the notes even more accessible to search (there's only so much you can do with OCR…). Problem sheets will probably stay paper-based though.
+The big plan for next year is to become **paperless**---at least for lecture notes---using one of the budget-friendly [new iPads](https://nr.apple.com/dE4x1p2G0v) with an Apple Pencil. This should reduce the amount of scanning I have to do, and make the content of the notes even more accessible to search (there's only so much you can do with OCR…). Problem sheets will probably stay paper-based though.
 
-[^1]:  [AutoCAD Plant 3D](https://www.autodesk.com/products/autocad/included-toolsets/autocad-plant-3d) is the 'proper' way of doing a P&ID, but I've been too busy to learn how to use it. Next year maybe!
-[^2]:  I found an old [blog post](http://visualsignals.typepad.co.uk/vislog/2008/03/creating-random.html) which helped a lot with this.
-[^3]:  _ShareLaTeX_ [was acquired by _Overleaf_](https://www.sharelatex.com/blog/2017/07/20/sharelatex-joins-overleaf.html) (another _LaTeX_\-in-the-browser service) just under a year ago. I've used both and prefer the editor in _ShareLaTeX_, which thankfully will survive going forwards as part of [_Overleaf_ v2](https://www.sharelatex.com/blog/2018/05/01/try-out-overleaf-v2.html).
+[^1]: [AutoCAD Plant 3D](https://www.autodesk.com/products/autocad/included-toolsets/autocad-plant-3d) is the 'proper' way of doing a P&ID, but I've been too busy to learn how to use it. Next year maybe!
+
+[^2]: I found an old [blog post](http://visualsignals.typepad.co.uk/vislog/2008/03/creating-random.html) which helped a lot with this.
+
+[^3]: _ShareLaTeX_ [was acquired by _Overleaf_](https://www.sharelatex.com/blog/2017/07/20/sharelatex-joins-overleaf.html) (another _LaTeX_-in-the-browser service) just under a year ago. I've used both and prefer the editor in _ShareLaTeX_, which thankfully will survive going forwards as part of [_Overleaf_ v2](https://www.sharelatex.com/blog/2018/05/01/try-out-overleaf-v2.html).

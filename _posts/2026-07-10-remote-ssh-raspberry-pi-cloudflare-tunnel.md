@@ -4,10 +4,10 @@ layout: post
 date: 2026-07-10 12:00
 headerImage: false
 tag:
-- raspberry-pi
-- cloudflare
-- ssh
-- security
+  - raspberry-pi
+  - cloudflare
+  - ssh
+  - security
 star: false
 category: blog
 author: andreasrichardson
@@ -82,8 +82,9 @@ For an extra layer on top of the IdP, go to **Zero Trust → Access controls →
 
 Go to **Zero Trust → Access controls → Applications → Create new application → Self-hosted and private**.
 
-- Add a **Destination** for the SSH hostname (e.g. `raspberrypi-ssh.yourdomain.com`) and a second for the test hostname used in the tunnel config below (e.g. `raspberrypi-test.yourdomain.com`). Anything the tunnel exposes without an Access destination is reachable by the whole internet; an application supports up to five.  
-**Pro Tip:** You can only have [1 level of subdomain for free](https://developers.cloudflare.com/cloudflare-one/networks/connectors/cloudflare-tunnel/troubleshoot-tunnels/common-errors/#i-see-this-site-cant-provide-a-secure-connection).
+- Add a **Destination** for the SSH hostname (e.g. `raspberrypi-ssh.yourdomain.com`) and a second for the test hostname used in the tunnel config below (e.g. `raspberrypi-test.yourdomain.com`). Anything the tunnel exposes without an Access destination is reachable by the whole internet; an application supports up to five.\
+  **Pro Tip:** You can only have [1 level of subdomain for free](https://developers.cloudflare.com/cloudflare-one/networks/connectors/cloudflare-tunnel/troubleshoot-tunnels/common-errors/#i-see-this-site-cant-provide-a-secure-connection).
+
 - Add an [**Access policy**](https://developers.cloudflare.com/cloudflare-one/access-controls/policies/) with the inline builder, e.g. scoped to the emails that should have access (the selector is called *Emails*, plural):
 
   | Action | Rule type | Selector | Value           |
@@ -91,6 +92,7 @@ Go to **Zero Trust → Access controls → Applications → Create new applicati
   | Allow  | Include   | Emails   | `you@email.com` |
 
   Name and save the policy. The default session duration is 24 hours, so expect to re-authenticate daily unless you change it.
+
 - Copy the **Application Audience (AUD) tag** from the **Additional settings** tab; you'll need it for the tunnel config. (The application name is auto-generated from the first destination; rename it if you like.)
 
 ## Step 4: Write the tunnel config
@@ -184,7 +186,7 @@ sudo systemctl restart cloudflared
 
 [Install `cloudflared`](https://github.com/cloudflare/cloudflared#installing-cloudflared) on the machine you're connecting from (Mac: `brew install cloudflared`), then [configure `cloudflared` as proxy](https://developers.cloudflare.com/cloudflare-one/networks/connectors/cloudflare-tunnel/use-cases/ssh/ssh-cloudflared-authentication/) in `~/.ssh/config`:
 
-```
+```text
 Host raspberrypi-ssh.yourdomain.com
   ProxyCommand cloudflared access ssh --hostname %h
 ```
@@ -201,7 +203,7 @@ The first connection opens a browser window for Cloudflare Access authentication
 
 **Pro Tip:** if `cloudflared` isn't on your `$PATH` when SSH runs the `ProxyCommand`, use the absolute path: run `which cloudflared` and substitute the result.
 
----
+______________________________________________________________________
 
 The end result is a Pi that's reachable from anywhere, with no open ports on the router, no public IP dependency, and an identity-gated access layer with MFA that starts with the Pi on every boot. (Yes, I rebooted it to check.)
 
