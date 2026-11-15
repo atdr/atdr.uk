@@ -23,6 +23,10 @@ jobs:
     name: build the site
     needs: ci
     timeout-minutes: 10
+    # configure-pages reads the repo's Pages settings through the API.
+    permissions:
+      contents: read
+      pages: read
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v7
