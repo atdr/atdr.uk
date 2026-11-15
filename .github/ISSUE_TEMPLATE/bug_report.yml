@@ -1,0 +1,43 @@
+name: Bug report
+description: A page on atdr.uk is broken, missing or shows something wrong
+labels: ['bug']
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for taking the time to report this.
+
+        Please write in plain English: short sentences, everyday words, and exactly what you saw. There is no need to write it up formally.
+
+
+  - type: checkboxes
+    id: preflight
+    attributes:
+      label: Before reporting
+      options:
+        - label: I searched the existing issues for this problem
+          required: true
+
+  - type: input
+    id: page
+    attributes:
+      label: Page
+      description: The address of the page, e.g. https://atdr.uk/about/
+    validations:
+      required: true
+
+  - type: textarea
+    id: what-happened
+    attributes:
+      label: What happened
+      description: What you expected to see, and what you saw instead. A screenshot helps.
+    validations:
+      required: true
+
+  - type: input
+    id: environment
+    attributes:
+      label: Browser
+      description: Browser and device, and whether dark mode was on.
+    validations:
+      required: false
