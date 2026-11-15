@@ -1,0 +1,52 @@
+name: ci
+
+# Does the site still build? Runs the same Jekyll build GitHub Pages uses on
+# pull requests, and deploy.yml calls it on every push to main before
+# publishing, so a push to main is checked once, by the deploy.
+on:
+  pull_request:
+  workflow_call:
+
+permissions:
+  contents: read
+
+# Pull requests share a group per branch, so a new push cancels the run it
+# supersedes. A run called from deploy.yml gets a group of its own, keyed by
+# the deploy run, so it never waits on the deploy group itself.
+concurrency:
+  group: ${{ github.workflow }}-${{ github.event_name == 'pull_request' && github.ref || github.run_id }}
+  cancel-in-progress: ${{ github.event_name == 'pull_request' }}
+
+jobs:
+  build:
+    name: jekyll build
+    timeout-minutes: 10
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v7
+        with:
+          persist-credentials: false
+      - uses: actions/jekyll-build-pages@v1
+        with:
+          source: ./
+          destination: ./_site
+
+  # The one check the ruleset requires from this workflow.
+  gate:
+    name: ci gate
+    # Not always(): a run superseded by a newer one is cancelled, and its gate
+    # would report a failure on the same commit the newer run is checking.
+    if: ${{ !cancelled() }}
+    needs: [build]
+    timeout-minutes: 5
+    runs-on: ubuntu-latest
+    steps:
+      - name: Require every job to have passed
+        env:
+          RESULTS: ${{ join(needs.*.result, ' ') }}
+        run: |
+          for result in $RESULTS; do
+            case "$result" in
+              failure|cancelled) echo "::error::a required job finished as $result"; exit 1 ;;
+            esac
+          done

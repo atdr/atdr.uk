@@ -102,11 +102,17 @@ compress_html:
       - development
       - stage
 
+# Repo files, not pages: without an entry here Jekyll publishes them.
 exclude:
   [
     "README.md",
+    "AGENTS.md",
+    "CLAUDE.md",
+    "SECURITY.md",
+    "CONTRIBUTION.md",
     "Gemfile",
     "Gemfile.lock",
     "FAQ.md",
+    "docker-compose.yml",
     "vendor",
   ]

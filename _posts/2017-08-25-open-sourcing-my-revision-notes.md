@@ -4,7 +4,7 @@ layout: post
 date: 2017-08-25 19:09
 image: /assets/images/chemistry-notes.jpeg
 headerImage: true
-tag: 
+tag:
 star: false
 category: blog
 author: andreasrichardson
@@ -18,14 +18,14 @@ I've only made notes for points in the specification that I wasn't confident of,
 
 I've made a folder for each course in which you'll find a set for each of the specification topics.
 
-* [AQA A-Level Physics (7407/7408)](https://quizlet.com/andreas_r99/folders/aqa-a-level-physics)
-  * [Paper 1](https://quizlet.com/andreas_r99/folders/physics-paper-1)
-  * [Paper 2](https://quizlet.com/andreas_r99/folders/physics-paper-2)
-  * [Paper 3](https://quizlet.com/andreas_r99/folders/physics-paper-3)
-* [AQA A-Level Chemistry (7404/7405)](https://quizlet.com/andreas_r99/folders/aqa-a-level-chemistry)
-  * [Paper 1](https://quizlet.com/andreas_r99/folders/chemistry-paper-1)
-  * [Paper 2](https://quizlet.com/andreas_r99/folders/chemistry-paper-2)
-  * Paper 3 is synoptic
+- [AQA A-Level Physics (7407/7408)](https://quizlet.com/andreas_r99/folders/aqa-a-level-physics)
+  - [Paper 1](https://quizlet.com/andreas_r99/folders/physics-paper-1)
+  - [Paper 2](https://quizlet.com/andreas_r99/folders/physics-paper-2)
+  - [Paper 3](https://quizlet.com/andreas_r99/folders/physics-paper-3)
+- [AQA A-Level Chemistry (7404/7405)](https://quizlet.com/andreas_r99/folders/aqa-a-level-chemistry)
+  - [Paper 1](https://quizlet.com/andreas_r99/folders/chemistry-paper-1)
+  - [Paper 2](https://quizlet.com/andreas_r99/folders/chemistry-paper-2)
+  - Paper 3 is synoptic
 
 There are a couple of mistakes in the images which I've tried to remedy in the text. Remember that your teachers and textbooks are much more likely to be correct if there's a conflict with what my notes say.
 
