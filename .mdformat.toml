@@ -1,0 +1,19 @@
+# Needs Python 3.13 or later: `exclude` errors below it.
+# Prose stays one line per paragraph, as the posts are written; mdformat only
+# normalises whitespace, lists and tables.
+wrap = "keep"
+number = true
+exclude = [
+  "CHANGELOG.md",
+  "CLAUDE.md",
+  # The indigo theme's own pages, kept as upstream has them so its updates
+  # merge cleanly. about.md is still the theme's placeholder.
+  "CONTRIBUTION.md",
+  "FAQ.md",
+  "about.md",
+  "vendor/**",
+  "_site/**",
+  ".venv/**",
+  ".pytest_cache/**",
+  "node_modules/**",
+]
